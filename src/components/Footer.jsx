@@ -1,4 +1,6 @@
-const Footer = () => {
+const Footer = (props) => {
+  const { handleToggleModal } = props
+
   return (
     <footer>
       <div className="bgGradient"></div>
@@ -8,7 +10,7 @@ const Footer = () => {
         <h1>APOD PROJECT</h1>
       </div>
 
-      <button>
+      <button onClick={handleToggleModal}>
         <i className="fa-solid fa-circle-info"></i>
       </button>
     </footer>
