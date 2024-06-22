@@ -1,5 +1,5 @@
-const Sidebar = (props) => {
-  const { handleToggleModal } = props
+const Sidebar = ({ handleToggleModal, data }) => {
+
   return (
     <div className="sidebar">
       <div 
@@ -7,10 +7,10 @@ const Sidebar = (props) => {
         onClick={handleToggleModal}>
       </div>
       <div className="sidebarContent">
-        <h2>Photo Name</h2>
-        <div>
-          <p>Description</p>
-          <p>Body Text</p>
+        <h2>{data?.title}</h2>
+        <div className="descContainer">
+          <p className='descTitle'>{data?.date}</p>
+          <p>{data?.explanation}</p>
         </div>
         <button onClick={handleToggleModal}>
           <i className="fa-solid fa-arrow-right"></i>
